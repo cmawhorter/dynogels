@@ -9,7 +9,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "make test",
+    "test": "node -e \"require('aws-sdk')\" || npm install aws-sdk; make test",
     "ci": "make coverage",
     "coveralls": "cat coverage/lcov.info | coveralls"
   },
@@ -28,7 +28,6 @@
   "license": "MIT",
   "dependencies": {
     "async": "^2.0.0",
-    "aws-sdk": "^2.4.8",
     "bunyan": "^1.8.1",
     "joi": "^9.2.0",
     "lodash": "^4.13.1",
