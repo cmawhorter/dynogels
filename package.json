@@ -29,7 +29,6 @@
   "license": "MIT",
   "dependencies": {
     "async": "^2.0.0",
-    "bunyan": "^1.8.1",
     "joi": "^10.2.0",
     "lodash": "^4.13.1",
     "uuid": "^3.0.0"
