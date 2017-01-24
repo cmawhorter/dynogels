@@ -27,7 +27,7 @@ exports.mockDynamoDB = () => {
 };
 
 exports.realDynamoDB = () => {
-  const opts = { endpoint: 'http://localhost:8000', apiVersion: '2012-08-10', region: 'eu-west-1' };
+  const opts = { endpoint: 'http://localhost:8000', apiVersion: '2012-08-10', region: 'eu-west-1', accessKeyId: 'a', secretAccessKey: 'b' };
   return new AWS.DynamoDB(opts);
 };
 

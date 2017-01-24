@@ -9,6 +9,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
+    "test-dev": "./node_modules/.bin/concurrently --raw \"dynamodb-local -inMemory -sharedDb\" \"npm test; echo 'Tests done'\"",
     "test": "make test",
     "ci": "make coverage",
     "coveralls": "cat coverage/lcov.info | coveralls"
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "concurrently": "^3.1.0",
     "coveralls": "^2.11.11",
     "eslint": "^2.13.1",
     "eslint-config-airbnb-base": "^3.0.1",
